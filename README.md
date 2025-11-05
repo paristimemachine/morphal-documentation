@@ -1,2 +1,1 @@
-# morphal-documentation
-MorphAL: documentation
+# MorphAL: documentation

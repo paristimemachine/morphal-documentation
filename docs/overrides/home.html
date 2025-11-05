@@ -1,0 +1,80 @@
+{% extends "social_media_follow.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__content">
+          <div class="md-content__inner">
+            <br>
+            <h1>MorphAL : analyse morphologique</h1>
+            <!-- <p>{{ config.site_description }}</p> -->
+            <p>
+              MorphAL est un outil d'analyse morphologique, développé dans le cadre du Consortium Huma-Num <a href="https://ptm.huma-num.fr/" target="_blank">Projets Time Machine (PTM)</a>.
+            </p>
+
+            <div class="flex-container">
+              <div class="flex-item">
+                <a href="https://plugins.qgis.org/plugins/morphal/" class="md-button md-button--primary" target="_blank" title="Article">Accès à l'extension QGIS</a>
+              </div>
+              <div class="flex-item">
+                <a href="https://doi.org/10.4000/books.pufr.7717" class="md-button md-button--primary" target="_blank" title="Article">Accès à l'article</a>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="md-home">
+                <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+                  Présentation de MorphAL
+                </a>
+                <!-- &nbsp;&nbsp; Présentation de MorphAL -->
+            </div>
+
+            <br>
+
+            <div class="md-home">
+              <a href="{{ 'installation/' | url }}" title="Installation" class="md-button md-button--primary">
+                Installation de MorphAL
+              </a>
+              <!-- &nbsp;&nbsp; Installation de MorphAL -->
+            </div>
+
+            <br>
+
+            <div class="md-home">
+              <a href="{{ 'traitements/' | url }}" title="Traitements" class="md-button md-button--primary">
+                Traitements
+              </a>
+              <!-- &nbsp;&nbsp; Traitements morphologiques -->
+            </div>
+
+            <!-- <br>
+            <br>
+
+            <div>
+                <a href="{{ 'dossier_1/' | url }}" title="Exemples" class="md-button md-button--primary">
+                Exemples
+                </a>
+                &nbsp;&nbsp; Exemples de requêtes et cartes produites
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+<!-- {% block content %}{% endblock %} -->
+{% block footer %}
+  <footer class="md-footer">
+      <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+          {% include "partials/copyright.html" %}
+          {% if config.extra.social %}
+          {% include "partials/social.html" %}
+          {% endif %}
+        </div>
+      </div>
+  </footer>
+{% endblock %}

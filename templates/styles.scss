@@ -1,0 +1,60 @@
+/*
+** for PDF Printing
+*/ 
+/* fixed for `base.css` of mkdocs v1.0.4 */
+code, pre code {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+}
+
+@media print {
+
+  @page {
+    @top-right {
+      font-size: 8pt;
+    }
+    @bottom-center {
+      font-size: 8pt;
+      content: counter(page) "/" counter(pages);
+    }
+    @bottom-right {
+      font-size: 8pt;
+    }
+  }
+
+  hr {
+    display: none;
+  }
+
+  p {
+    font-size: inherit;
+  }
+
+  article#doc-toc h1 {
+    color: #00003e;
+  }
+
+  article#doc-toc li {
+    font-size: 12px;
+  }
+
+  article h1, .md-typeset h1 {
+    border-bottom: 2px solid #00003e;
+    color: #00003e;
+  }
+
+  article h2 {
+    border-bottom: 1px solid #ff6600;
+  }
+
+  article {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-size: 12px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  table {
+    width: 100%;
+  }
+
+}

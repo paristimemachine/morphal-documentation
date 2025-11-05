@@ -1,0 +1,42 @@
+/* home page buttons */
+.md-home .md-button {
+    width:200px;
+    text-align:center;
+}
+
+.md-typeset .md-home .md-button--primary {
+    background-color: #dd2e57;
+    border-color: #dd2e57;
+    color: white;
+}
+
+.md-home .md-button--primary:hover,
+.md-home .md-button--primary:focus {
+    background-color: var(--md-accent-fg-color);
+    border-color: var(--md-accent-fg-color);
+    color: white;
+}
+
+/* image */
+.image-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    flex: 1 1 30%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .flex-item {
+        flex: 1 1 100%;
+    }
+}

@@ -25,6 +25,7 @@ python3.12 -m venv venv
 Install Python dependencies
 
 ```sh
+source venv/bin/activate
 make install
 ```
 

@@ -144,7 +144,7 @@ La distance distance admet des valeurs comprises dans l'intervalle [0,1], avec 1
 La caractérisation rectangulaire peut possiblement être réalisée à l'aide trois niveaux de formes rectangulaires, la détection à partir un niveau unique étant apparu comme relativement limitée.
 
 La caractérisation circulaire repose quant à elle sur l'indice de Miller ($I_{Miller}$), avec un seuil fixé par défaut à 0.9 :
-$$ I_{Miller} = \frac{4\pi \times Surface}{Périmètre^2} $$
+$$ I_{Miller} = \frac{4\pi \times Aire}{Périmètre^2} $$
 
 <figure markdown>
   ![Caractérisation rectangulaire](assets/images/processing/polygone-caracterisation_rectangulaire.png){ .image-center width=60% loading=lazy }
@@ -157,22 +157,16 @@ $$ I_{Miller} = \frac{4\pi \times Surface}{Périmètre^2} $$
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |INPUT_LAYER|Couche source|QgsVectorLayer|Couche polygonale|✓||
 |CALC_METHOD|Calculer en utilisant|Énumération|Choix du système de projection dans lequel l'ensemble des calculs sera effectué|✓|Par défaut : SCR (Système de Coordonnées de Référence) de la couche. Sinon, SCR du projet en cours ou Ellipsoïdale.|
-
-
-|RECTANGLE_LEVEL_1|Détecter les formes rectangulaires - Niveau 1||Booléen|Champ ajouté : PERIMETER.|✓|Par défaut : vrai. Sinon faux|
-|SD_CONVEX_RECT_1|Distance surfacique à l'enveloppe convexe (niveau 1)|
-|SD_MBR_RECT_1|Distance surfacique au rectangle englobant minimum (niveau 1)|
-
-|RECTANGLE_LEVEL_2|Détecter les formes rectangulaires - Niveau 2|
-|SD_CONVEX_RECT_2|Distance surfacique à l'enveloppe convexe (niveau 2)|
-|SD_MBR_RECT_2|Distance surfacique au rectangle englobant minimum (niveau 2)|
-
-|RECTANGLE_LEVEL_3|Détecter les formes rectangulaires - Niveau 3|
-|SD_CONVEX_RECT_3|Distance surfacique à l'enveloppe convexe (niveau 3)|
-|SD_MBR_RECT_3|Distance surfacique au rectangle englobant minimum (niveau 3)|
-
+|RECTANGLE_LEVEL_1|Détecter les formes rectangulaires - Niveau 1|Booléen|Champs ajoutés : SD_CONVEX, SD_MBR, ORIENT_REC et ELONGATION.|✓|Par défaut : vrai. Sinon faux|
+|SD_CONVEX_RECT_1|Distance surfacique à l'enveloppe convexe (niveau 1)|Nombre||✓|Par défaut : 0.05. Valeur minimale : 0. Valeur maximale : 1.|
+|SD_MBR_RECT_1|Distance surfacique au rectangle englobant minimum (niveau 1)|Nombre||✓|Par défaut : 0.05. Valeur minimale : 0. Valeur maximale : 1.|
+|RECTANGLE_LEVEL_2|Détecter les formes rectangulaires - Niveau 2|Booléen|Champs ajoutés : SD_CONVEX, SD_MBR, ORIENT_REC et ELONGATION.|✓|Par défaut : vrai. Sinon faux|
+|SD_CONVEX_RECT_2|Distance surfacique à l'enveloppe convexe (niveau 2)|Nombre||✓|Par défaut : 0.1. Valeur minimale : 0. Valeur maximale : 1.|
+|SD_MBR_RECT_2|Distance surfacique au rectangle englobant minimum (niveau 2)|Nombre||✓|Par défaut : 0.1. Valeur minimale : 0. Valeur maximale : 1.|
+|RECTANGLE_LEVEL_3|Détecter les formes rectangulaires - Niveau 3|Booléen|Champs ajoutés : SD_CONVEX, SD_MBR, ORIENT_REC et ELONGATION.|✓|Par défaut : vrai. Sinon faux|
+|SD_CONVEX_RECT_3|Distance surfacique à l'enveloppe convexe (niveau 3)|Nombre||✓|Par défaut : 0.15. Valeur minimale : 0. Valeur maximale : 1.|
+|SD_MBR_RECT_3|Distance surfacique au rectangle englobant minimum (niveau 3)|Nombre||✓|Par défaut : 0.15. Valeur minimale : 0. Valeur maximale : 1.|
 |MILLER_INDEX|Seuil de détection de formes circulaires|Nombre|Champ ajouté : MILLER_IND.|✓|Par défaut : 0.9. Valeur minimale : 0. Valeur maximale : 1.|
-
 |RECT_1_LAYER_OUTPUT|Couche de rectangle de niveau 1|String|Chemin du fichier dans lequel la couche résultante sera enregistrée. Si non spécifié, une couche temporaire sera créée.||Par défaut : une couche temporaire est créée.|
 |RECT_2_LAYER_OUTPUT|Couche de rectangle de niveau 2|String|Chemin du fichier dans lequel la couche résultante sera enregistrée. Si non spécifié, une couche temporaire sera créée.||Par défaut : une couche temporaire est créée.|
 |RECT_3_LAYER_OUTPUT|Couche de rectangle de niveau 3|String|Chemin du fichier dans lequel la couche résultante sera enregistrée. Si non spécifié, une couche temporaire sera créée.||Par défaut : une couche temporaire est créée.|

@@ -68,6 +68,8 @@ plugins:
       lang:
         - fr
         # - en
+  # Not yet supported by Zensical, which ignores it without error. The
+  # configuration is kept as is, ready for when support lands.
   - with-pdf: # Ubuntu 20+ as it requires libpango >= 1.44
       author: Eric Grosso et Eric Mermet (PTM)
       # copyright: ANY TEXT

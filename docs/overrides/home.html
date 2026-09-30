@@ -9,56 +9,36 @@
           <div class="md-content__inner">
             <br>
             <h1>MorphAL : analyse morphologique</h1>
-            <!-- <p>{{ config.site_description }}</p> -->
             <p>
               MorphAL est un outil d'analyse morphologique, développé dans le cadre du Consortium Huma-Num <a href="https://ptm.huma-num.fr/" target="_blank">Projets Time Machine (PTM)</a>.
             </p>
 
-            <div class="flex-container">
-              <div class="flex-item">
-                <a href="https://plugins.qgis.org/plugins/morphal/" class="md-button md-button--primary" target="_blank" title="Article">Accès à l'extension QGIS</a>
-              </div>
-              <div class="flex-item">
-                <a href="https://doi.org/10.4000/books.pufr.7717" class="md-button md-button--primary" target="_blank" title="Article">Accès à l'article</a>
-              </div>
-            </div>
-
-            <br>
-
-            <div class="md-home">
-                <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
-                  Présentation de MorphAL
-                </a>
-                <!-- &nbsp;&nbsp; Présentation de MorphAL -->
-            </div>
-
-            <br>
-
-            <div class="md-home">
-              <a href="{{ 'installation/' | url }}" title="Installation" class="md-button md-button--primary">
-                Installation de MorphAL
+            <div class="card-grid card-grid--duo">
+              <a href="https://plugins.qgis.org/plugins/morphal/" class="card card--access" target="_blank" title="Accès à l'extension QGIS MorphAL">
+                <span class="card__title">Extension QGIS</span>
+                <img src="{{ 'assets/images/qgis-logo.svg' | url }}" alt="QGIS" class="card__logo">
               </a>
-              <!-- &nbsp;&nbsp; Installation de MorphAL -->
-            </div>
-
-            <br>
-
-            <div class="md-home">
-              <a href="{{ 'traitements/' | url }}" title="Traitements" class="md-button md-button--primary">
-                Traitements
+              <a href="https://doi.org/10.4000/books.pufr.7717" class="card card--access" target="_blank" title="Accès à l'article scientifique">
+                <span class="card__title">Article scientifique</span>
+                <img src="{{ 'assets/images/openedition-logo.svg' | url }}" alt="OpenEdition" class="card__logo">
               </a>
-              <!-- &nbsp;&nbsp; Traitements morphologiques -->
             </div>
 
-            <!-- <br>
-            <br>
+            <div class="card-grid">
+              <a href="{{ page.next_page.url | url }}" class="card card--doc" title="{{ page.next_page.title | e }}">
+                <span class="card__title">Présentation</span>
+                <span class="card__desc">Présentation de MorphAL</span>
+              </a>
+              <a href="{{ 'installation/' | url }}" class="card card--doc" title="Installation">
+                <span class="card__title">Installation</span>
+                <span class="card__desc">Installer l'extension dans QGIS</span>
+              </a>
+              <a href="{{ 'traitements/' | url }}" class="card card--doc" title="Traitements">
+                <span class="card__title">Traitements</span>
+                <span class="card__desc">Les traitements et leurs indicateurs</span>
+              </a>
+            </div>
 
-            <div>
-                <a href="{{ 'dossier_1/' | url }}" title="Exemples" class="md-button md-button--primary">
-                Exemples
-                </a>
-                &nbsp;&nbsp; Exemples de requêtes et cartes produites
-            </div> -->
           </div>
         </div>
       </div>

@@ -1,42 +1,140 @@
-/* home page buttons */
-.md-home .md-button {
-    width:200px;
-    text-align:center;
+/* Navbar: responsive logo */
+.md-header__button.md-logo img {
+    height: 32px;
 }
 
-.md-typeset .md-home .md-button--primary {
-    background-color: #dd2e57;
-    border-color: #dd2e57;
-    color: white;
+@media (max-width: 960px) {
+    .md-header__button.md-logo img {
+        height: 24px;
+    }
 }
 
-.md-home .md-button--primary:hover,
-.md-home .md-button--primary:focus {
-    background-color: var(--md-accent-fg-color);
-    border-color: var(--md-accent-fg-color);
-    color: white;
+@media (max-width: 768px) {
+    .md-header__button.md-logo img {
+        height: 20px;
+    }
 }
 
-/* image */
+/* Announce bar */
+.md-announce a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Image */
 .image-center {
     display: block;
     margin: 0 auto;
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+/* Card grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
-.flex-item {
-    flex: 1 1 30%;
-    margin: 10px;
-    box-sizing: border-box;
+/* Two-card row: the access grid, which holds fewer items than the doc grid */
+.card-grid--duo {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid + .card-grid {
+    margin-top: 1.5rem;
 }
 
 @media (max-width: 768px) {
-    .flex-item {
-        flex: 1 1 100%;
+    .card-grid,
+    .card-grid--duo {
+        grid-template-columns: 1fr;
     }
+}
+
+/* Card: light mode */
+.md-typeset .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 1.3rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-top: 4px solid transparent;
+    background-color: #f4f4f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: var(--md-typeset-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+                border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Card: dark mode */
+[data-md-color-scheme="slate"] .md-typeset .card {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover: light mode */
+.md-typeset .card:hover {
+    transform: translateY(-4px);
+    background-color: #ececed;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+    text-decoration: none;
+    color: var(--md-typeset-color);
+}
+
+/* Hover: dark mode */
+[data-md-color-scheme="slate"] .md-typeset .card:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+/* Hover */
+.md-typeset .card--access:hover {
+    border-color: #dd2e57;
+}
+
+.md-typeset .card--doc:hover {
+    border-color: #1565c0;
+}
+
+.md-typeset .card .card__logo {
+    height: 36px;
+    width: auto;
+    max-height: 36px;
+    max-width: 120px;
+    object-fit: contain;
+    margin-top: 0.75rem;
+    flex-shrink: 0;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card__desc {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin-top: 0.3rem;
+    text-align: center;
+}
+
+/* Access cards */
+.card--access {
+    border-top-color: #dd2e57;
+}
+
+.card--access .card__title {
+    color: #dd2e57;
+}
+
+/* Doc cards */
+.card--doc {
+    border-top-color: #1565c0;
+}
+
+.card--doc .card__title {
+    color: #1565c0;
 }

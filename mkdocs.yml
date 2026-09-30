@@ -1,15 +1,15 @@
 # Project information
 site_name: MorphAL &mdash; Documentation
 site_url: https://doc.ptm.huma-num.fr/morphal/
-site_author: EG/EM (PTM)
+site_author: Eric Grosso (PTM)
 site_description: >-
   MorphAL est un outil d'analyse morphologique, développé dans le cadre du Consortium Huma-Num
   Projets Time Machine (PTM).
 #  <a href="https://ptm.huma-num.fr/" target="_blank">Projets Time Machine (PTM)</a>.
 
 # Repository
-repo_name: paristimemachine/morphal-documentation
-repo_url: https://github.com/paristimemachine/morphal-documentation
+repo_name: paristimemachine/ptm4qgis-morphal
+repo_url: https://github.com/paristimemachine/ptm4qgis-morphal
 
 # Copyright
 copyright: <a href="https://ptm.huma-num.fr/" target="_blank">PTM</a> &mdash; 2021-2026
@@ -68,10 +68,14 @@ plugins:
       lang:
         - fr
         # - en
-  # Not yet supported by Zensical, which ignores it without error. The
-  # configuration is kept as is, ready for when support lands.
+
+  ### PDF export
+  # Unavailable for now: the `with-pdf` plugin is not yet supported by Zensical.
+  # The configuration is kept as it is, ready for when support lands, and
+  # `make dist-pdf` reports the unavailability rather than silently producing
+  # nothing.
   - with-pdf: # Ubuntu 20+ as it requires libpango >= 1.44
-      author: Eric Grosso et Eric Mermet (PTM)
+      author: Eric Grosso (PTM)
       # copyright: ANY TEXT
       
       cover: true

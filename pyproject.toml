@@ -1,0 +1,23 @@
+[project]
+name = "morphal-documentation"
+version = "0.1.0"
+description = "Documentation for MorphAL, a morphological analysis tool developed within the Huma-Num consortium Projets Time Machine (PTM)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Eric Grosso" },
+]
+
+dependencies = [
+    "zensical==0.0.66",
+]
+
+[project.urls]
+Documentation = "https://doc.ptm.huma-num.fr/morphal/"
+Repository = "https://github.com/paristimemachine/morphal-documentation"
+
+# The project is a documentation site, not an installable package: uv only has
+# to resolve and install the dependencies above.
+[tool.uv]
+package = false

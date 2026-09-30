@@ -1,19 +1,22 @@
 install:
-	pip install -r requirements.txt
+	uv sync
+
+lock:
+	uv lock --upgrade
 
 clean:
 	rm -r site/
 
 dist:
-	zensical build
+	uv run zensical build
 
 dist-zip:
 	rm -r site/
-	zensical build
+	uv run zensical build
 	zip -r site/morphal-doc.zip site
 
 serve:
-	zensical serve
+	uv run zensical serve
 
 # PDF export: the with-pdf plugin is not yet supported by Zensical. Its
 # configuration is kept in mkdocs.yml, ready for when support lands. Until

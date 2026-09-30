@@ -134,12 +134,13 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+# Zensical does not apply the `pymdownx.arithmatex` extension, so the TeX
+# delimiters reach the HTML untouched. MathJax is configured to recognise them
+# directly. Both `$...$` and `$$...$$` work.
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
+  # - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js
   # - js/MathJax.js
-  # - https://polyfill.io/v3/polyfill.min.js?features=es6
-  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
   - admonition

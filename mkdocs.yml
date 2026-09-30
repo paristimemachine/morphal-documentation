@@ -3,9 +3,10 @@ site_name: MorphAL &mdash; Documentation
 site_url: https://doc.ptm.huma-num.fr/morphal/
 site_author: Eric Grosso (PTM)
 site_description: >-
-  MorphAL est un outil d'analyse morphologique, développé dans le cadre du Consortium Huma-Num
-  Projets Time Machine (PTM).
-#  <a href="https://ptm.huma-num.fr/" target="_blank">Projets Time Machine (PTM)</a>.
+  MorphAL (pour Morphological Analysis) est un outil d'analyse morphologique,
+  en particulier des parcellaires et des réseaux viaires. Il quantifie et compare
+  des structures spatiales au moyen d'algorithmes dédiés à l'analyse des formes,
+  afin de notamment faciliter la recherche des logiques de structuration paysagère.
 
 # Repository
 repo_name: paristimemachine/ptm4qgis-morphal

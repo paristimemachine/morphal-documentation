@@ -122,8 +122,11 @@ plugins:
         remove_comments: true
       cache_safe: true
 
-# Customization
+# Customisation
 extra:
+  # (home page) announce above navbar
+  announce: false
+
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/paristimemachine

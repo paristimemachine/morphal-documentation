@@ -194,3 +194,6 @@ cython_debug/
 .cursorindexingignore
 
 tmp/
+
+# Site archives produced by `make dist-zip`
+*.zip

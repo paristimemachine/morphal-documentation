@@ -1,7 +1,7 @@
 # Project information
 site_name: MorphAL &mdash; Documentation
 site_url: https://doc.ptm.huma-num.fr/morphal/
-site_author: Eric Grosso (PTM)
+site_author: EG (PTM)
 site_description: >-
   MorphAL (pour Morphological Analysis) est un outil d'analyse morphologique,
   en particulier des parcellaires et des réseaux viaires. Il quantifie et compare
@@ -17,7 +17,7 @@ copyright: <a href="https://ptm.huma-num.fr/" target="_blank">PTM</a> &mdash; 20
 
 theme:
   name: material
-  custom_dir: ./docs/overrides
+  custom_dir: ./overrides
   language: fr
 #  logo: assets/images/logo.png
 #  favicon: assets/images/logo-favicon.png
@@ -70,6 +70,14 @@ plugins:
         - fr
         # - en
 
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+
   ### PDF export
   # Unavailable for now: the `with-pdf` plugin is not yet supported by Zensical.
   # The configuration is kept as it is, ready for when support lands, and
@@ -113,14 +121,6 @@ plugins:
       # debug_html: true
       # show_anchors: true
       # verbose: true
-
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
-      htmlmin_opts:
-        remove_comments: true
-      cache_safe: true
 
 # Customisation
 extra:

@@ -1,3 +1,7 @@
+.PHONY: install lock clean dist dist-zip dist-pdf serve
+
+ARCHIVE := morphal-doc.zip
+
 install:
 	uv sync
 
@@ -5,15 +9,14 @@ lock:
 	uv lock --upgrade
 
 clean:
-	rm -r site/
+	@if [ -d site/ ]; then rm -r site/; fi
+	@if [ -f $(ARCHIVE) ]; then rm $(ARCHIVE); fi
 
 dist:
 	uv run zensical build
 
-dist-zip:
-	rm -r site/
-	uv run zensical build
-	zip -r site/morphal-doc.zip site
+dist-zip: clean dist
+	zip -r $(ARCHIVE) site
 
 serve:
 	uv run zensical serve

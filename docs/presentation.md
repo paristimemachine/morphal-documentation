@@ -1,5 +1,4 @@
 ---
-template: main.html
 hide:
   - navigation
 ---
@@ -27,9 +26,9 @@ MorphAL aide ainsi à rechercher et comprendre les logiques de structuration pay
 
 ## Logiciel libre
 
-MorphAL est directement disponible depuis le [répertoire officiel des extensions QGIS](https://plugins.qgis.org/plugins/morphal/){target="_blank"}, ce qui rend triviale son installation.
+MorphAL est directement disponible depuis le [dépôt officiel des extensions QGIS](https://plugins.qgis.org/plugins/morphal/){target="_blank"}, ce qui rend triviale son installation.
 
-L'ensemble des développements associés sont déposés sous licence libre [GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html){target="_blank"} (GNU General Public License, version 2) et accessibles via ce [répertoire Github dédié](https://github.com/paristimemachine/ptm4qgis-morphal){target="_blank"}, en lien avec les autres développements PTM. MorphAL est donc librement ouvert à tous les utilisateurs, sans restriction d'accès.
+L'ensemble des développements associés sont déposés sous licence libre [GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html){target="_blank"} (GNU General Public License, version 2) et accessibles via ce [dépôt GitHub dédié](https://github.com/paristimemachine/ptm4qgis-morphal){target="_blank"}, en lien avec les autres développements PTM. MorphAL est donc librement ouvert à tous les utilisateurs, sans restriction d'accès.
 
 ## Citation
 
@@ -43,6 +42,6 @@ Les publications suivantes fournissent des exemples de mise en œuvre de MorphAL
 
 - Robert Sandrine, Noizet Hélène, Grosso Éric et Chareille Pascal. 2013. Analyses morphologiques du parcellaire ancien de Paris, in : Noizet H., Bove B. et Costa L. (dir.), Paris de parcelles en pixels. Analyse géomatique de l'espace parisien médiéval et moderne, Presses universitaires de Vincennes – Comité d'histoire de la ville de Paris, Paris : 197-221.
 
-- Noizet Hélène, Bove Boris et Bernardi Philippe. 2024. Essai d'analyse morphologique de l'île de la Cité à Paris (1300-1754), Histoire urbaine, 70(2), 65-94. <https://shs.cairn.info/revue-histoire-urbaine-2024-2-page-65>{target="_blank"}.
+- Noizet Hélène, Bove Boris et Bernardi Philippe. 2024. Essai d'analyse morphologique de l'île de la Cité à Paris (1300-1754), Histoire urbaine, 70(2), 65-94. [https://shs.cairn.info/revue-histoire-urbaine-2024-2-page-65](https://shs.cairn.info/revue-histoire-urbaine-2024-2-page-65){target="_blank"}.
 
-- Hermenault Léa. 2020. De l'analyse du parcellaire aux dynamiques intra-urbaines : apport de l'archéogéographie à la compréhension de l'évolution de l'espace parisien sur le temps long, ArcheoSciences, 44-2, 161-174. <http://journals.openedition.org/archeosciences/7625>{target="_blank"}, DOI : <https://doi.org/10.4000/archeosciences.7625>{target="_blank"}.
+- Hermenault Léa. 2020. De l'analyse du parcellaire aux dynamiques intra-urbaines : apport de l'archéogéographie à la compréhension de l'évolution de l'espace parisien sur le temps long, ArcheoSciences, 44-2, 161-174. [http://journals.openedition.org/archeosciences/7625](http://journals.openedition.org/archeosciences/7625){target="_blank"}, DOI : [https://doi.org/10.4000/archeosciences.7625](https://doi.org/10.4000/archeosciences.7625){target="_blank"}.
